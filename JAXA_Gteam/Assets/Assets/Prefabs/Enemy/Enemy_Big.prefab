@@ -151,5 +151,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 200
-  minSpeed: 3
-  maxSpeed: 8
+  destroyDistance: 50
+  speed: 5

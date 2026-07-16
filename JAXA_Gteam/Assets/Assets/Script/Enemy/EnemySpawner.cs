@@ -11,7 +11,8 @@ public class EnemySpawner : MonoBehaviour
     public Transform rightSpawn;
     public Transform leftBackSpawn;
     public Transform rightBackSpawn;
-
+    public Transform leftUpSpawn;
+    public Transform rightUpSpawn;
     void Start()
     {
         InvokeRepeating(
@@ -23,7 +24,7 @@ public class EnemySpawner : MonoBehaviour
 
     void SpawnEnemy()
     {
-        int rand = Random.Range(0, 4);
+        int rand = Random.Range(0, 6);
 
         Transform spawnPoint = null;
         Vector3 direction = Vector3.zero;
@@ -42,12 +43,20 @@ public class EnemySpawner : MonoBehaviour
 
             case 2:
                 spawnPoint = leftBackSpawn;
-                direction = new Vector3(1, 0, -1);
+                direction = new Vector3(1, 1, 0);
                 break;
 
             case 3:
                 spawnPoint = rightBackSpawn;
-                direction = new Vector3(-1, 0, -1);
+                direction = new Vector3(-1, 1, 0);
+                break;
+            case 4:
+                spawnPoint = leftUpSpawn;
+                direction = new Vector3(1, -1, 0);
+                break;
+            case 5:
+                spawnPoint = rightUpSpawn;
+                direction = new Vector3(-1, -1, 0);
                 break;
         }
 
