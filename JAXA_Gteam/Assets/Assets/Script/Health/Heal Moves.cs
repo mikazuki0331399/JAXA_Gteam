@@ -27,6 +27,15 @@ public class HealMove : MonoBehaviour
             rotateSpeed * Time.deltaTime,
             0
         );
+        if (
+           transform.position.x > 45f ||
+           transform.position.x < -45f ||
+           transform.position.z > 70f ||
+           transform.position.z < -45f
+       )
+        {
+            Destroy(gameObject);
+        }
     }
 
 
