@@ -12,6 +12,10 @@ public class PlayerMove : MonoBehaviour
     [SerializeField]
     private int hp = 10;
 
+    //プレイヤーのHPバーのやつ
+    [SerializeField]
+    private HealthGauge healthGauge;
+
     // 無敵時間の長さ
     [SerializeField]
     private float invincibleTime = 1.0f;
@@ -32,6 +36,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField]
     private float maxZ = 4.0f;
 
+    
 
     void Start()
     {
@@ -80,6 +85,12 @@ public class PlayerMove : MonoBehaviour
 
             hp--;
 
+            healthGauge.SetGauge((float)hp / 10f);
+
+
+            // ダメージ時だけ揺らす
+            healthGauge.ShakeGauge();
+
             Debug.Log("被弾！");
             Debug.Log("現在HP : " + hp);
 
@@ -101,6 +112,9 @@ public class PlayerMove : MonoBehaviour
             {
                 hp = 10;
             }
+
+            // HPバー更新
+            healthGauge.SetGauge((float)hp / 10f);
 
             Debug.Log("HP回復！");
             Debug.Log("現在HP : " + hp);
