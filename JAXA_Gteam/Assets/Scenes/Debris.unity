@@ -510,6 +510,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 15
+  hp: 10
+  invincibleTime: 1
+  minX: -37
+  maxX: 37
+  minZ: -17
+  maxZ: 17
 --- !u!1001 &557768228
 PrefabInstance:
   m_ObjectHideFlags: 0
