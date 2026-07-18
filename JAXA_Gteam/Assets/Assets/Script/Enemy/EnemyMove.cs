@@ -49,6 +49,12 @@ public class EnemyMove : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+
+        if (CompareTag("Health"))
+        {
+            return;
+        }
+
         if (other.CompareTag("Debris"))
         {
             transform.localScale *= 1.5f;
