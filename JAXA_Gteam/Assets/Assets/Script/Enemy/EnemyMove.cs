@@ -11,6 +11,7 @@ public class EnemyMove : MonoBehaviour
 
     public float destroyDistance = 50f;
     public float speed;
+    public Transform centerPoint; 
 
     private Vector3 startPosition;
     private Vector3 moveDirection;
@@ -35,17 +36,25 @@ public class EnemyMove : MonoBehaviour
             rotateSpeed * Time.deltaTime,
             0
         );
-
-        float distance =
-                   Vector3.Distance(
-                       startPosition,
-                       transform.position
-                   );
-
-        if (distance >= destroyDistance)
+        if (
+            transform.position.x >  45f ||
+            transform.position.x < -45f ||
+            transform.position.z >  70f ||
+            transform.position.z < -45f
+        )
         {
             Destroy(gameObject);
         }
 
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Debris"))
+        {
+            transform.localScale *= 1.5f;
+
+            Destroy(other.gameObject);
+            Destroy(gameObject, 0.25f);
+        }
     }
 }
