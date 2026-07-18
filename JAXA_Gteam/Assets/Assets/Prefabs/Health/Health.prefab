@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4338777016634881440}
   - component: {fileID: 5414700513017851205}
   - component: {fileID: 2335325806645489534}
-  - component: {fileID: 893404847023754143}
+  - component: {fileID: -6649612396707577888}
   m_Layer: 0
   m_Name: Health
   m_TagString: Health
@@ -134,7 +134,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &893404847023754143
+--- !u!114 &-6649612396707577888
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,10 +143,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 316923416451886980}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4317f87e89519544a928e0015c60403, type: 3}
+  m_Script: {fileID: 11500000, guid: 2da3d2214b8a2174b9fa5b6c4feec307, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateSpeed: 10000
-  destroyDistance: 50
-  speed: 10
-  centerPoint: {fileID: 0}
+  speed: 5

@@ -50,10 +50,12 @@ public class HealSpawner : MonoBehaviour
                 Quaternion.identity
             );
 
-        heal.GetComponent<EnemyMove>()
+
+        heal.GetComponent<HealMove>()
             .SetDirection(
                 GetDirection(spawnPoint)
             );
+
     }
 
     Vector3 GetDirection(Transform spawnPoint)
@@ -68,4 +70,13 @@ public class HealSpawner : MonoBehaviour
      
             return new Vector3(-1, 0, -1);
     }
+    void Update()
+    {
+        transform.Rotate(
+            0,
+            100 * Time.deltaTime,
+            0
+        );
+    }
+    
 }

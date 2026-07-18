@@ -55,6 +55,12 @@ public class EnemyMove : MonoBehaviour
             return;
         }
 
+        if (other.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         if (other.CompareTag("Debris"))
         {
             transform.localScale *= 1.5f;
