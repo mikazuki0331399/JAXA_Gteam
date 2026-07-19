@@ -33,8 +33,9 @@ public class CameraShake : MonoBehaviour
         {
             float x = Random.Range(-shakePower, shakePower);
             float y = Random.Range(-shakePower, shakePower);
-
-            transform.position = startPos + new Vector3(x, y, 0);
+            float z = Random.Range(-shakePower, shakePower);
+            //Ç«ÇÃç¿ïWÇóhÇÁÇ∑Ç©
+            transform.position = startPos + new Vector3(x, 0, z);
 
             timer += Time.deltaTime;
 
