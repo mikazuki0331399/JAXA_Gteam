@@ -133,6 +133,7 @@ m_ResolvedPackages:
     - 2.11.3
     - 2.11.4
     - 2.12.4
+    - 2.13.3
     compatible:
     - 2.7.1
     - 2.8.1
