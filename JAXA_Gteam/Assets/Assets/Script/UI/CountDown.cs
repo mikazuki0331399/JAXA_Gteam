@@ -13,13 +13,13 @@ public class Countdown : MonoBehaviour
 
     IEnumerator Start()
     {
-        countdownText.text = "3";
+        countdownText.text = "  3";
         yield return new WaitForSeconds(1);
 
-        countdownText.text = "2";
+        countdownText.text = "  2";
         yield return new WaitForSeconds(1);
 
-        countdownText.text = "1";
+        countdownText.text = "  1";
         yield return new WaitForSeconds(1);
 
         countdownText.text = "START!";

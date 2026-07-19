@@ -22,7 +22,7 @@ public class EnemySpawner : MonoBehaviour
         InvokeRepeating(
             nameof(SpawnEnemy),
             1f,
-            2f
+            0.5f
         );
     }
 
