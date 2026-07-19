@@ -365,6 +365,7 @@
 "Assets/Assets/Script/ResultScene/Gameover.cs"
 "Assets/Assets/Script/UI/CameraShake.cs"
 "Assets/Assets/Script/UI/CountDown.cs"
+"Assets/Assets/Script/UI/GameManager.cs"
 "Assets/Assets/Script/UI/HealthGauge.cs"
 "Assets/Assets/Script/UI/ProgressController.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"

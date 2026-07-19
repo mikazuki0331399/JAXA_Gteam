@@ -88,6 +88,12 @@ public class PlayerMove : MonoBehaviour
 
             hp--;
 
+            if (hp <= 0)
+            {
+                FindObjectOfType<GameManager>()
+                    .FinishGame();
+            }
+
             healthGauge.SetGauge((float)hp / 10f);
 
 
