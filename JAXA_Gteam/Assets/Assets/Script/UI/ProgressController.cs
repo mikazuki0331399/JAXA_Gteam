@@ -7,7 +7,7 @@ public class ProgressController : MonoBehaviour
     public RectTransform arrow;
 
     public float gameTime = 60f;
-
+    public bool gameStarted = false;
     private float timer = 0f;
 
     public float startY = 200f;
@@ -15,6 +15,11 @@ public class ProgressController : MonoBehaviour
     public float offsetX = 0f;
     void Update()
     {
+
+        if (!gameStarted)
+        {
+            return;
+        }
         timer += Time.deltaTime;
 
         float progress = timer / gameTime;
