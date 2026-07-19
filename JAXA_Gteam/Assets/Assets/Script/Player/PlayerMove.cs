@@ -36,7 +36,10 @@ public class PlayerMove : MonoBehaviour
     [SerializeField]
     private float maxZ = 4.0f;
 
-    
+    // カメラ揺れ
+    [SerializeField]
+    private CameraShake cameraShake;
+
 
     void Start()
     {
@@ -90,6 +93,8 @@ public class PlayerMove : MonoBehaviour
 
             // ダメージ時だけ揺らす
             healthGauge.ShakeGauge();
+
+            cameraShake.Shake();
 
             Debug.Log("被弾！");
             Debug.Log("現在HP : " + hp);
