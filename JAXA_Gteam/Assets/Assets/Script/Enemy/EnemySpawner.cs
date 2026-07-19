@@ -15,14 +15,17 @@ public class EnemySpawner : MonoBehaviour
     public Transform rightUpSpawn;
     public float randomSpawnRange = 5f;
 
-    void Start()
+    public bool gameStarted = false;
+    public void StartGame()
     {
+        gameStarted = true;
         InvokeRepeating(
             nameof(SpawnEnemy),
             1f,
-            0.5f
+            2f
         );
     }
+
 
     void SpawnEnemy()
     {
