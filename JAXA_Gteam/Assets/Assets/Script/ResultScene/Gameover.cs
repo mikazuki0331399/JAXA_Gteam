@@ -20,7 +20,7 @@ public class GameOverTextAnimator : MonoBehaviour
                 Debug.Log("GameOver!");
                 // シェイクアニメーション
                 transFormCache.DOShakePosition(1.5f, 100);
-            });))
+            });
         DOVirtual.DelayedCall(10f, () =>
         {
             // 3秒後にシーンをリロード
