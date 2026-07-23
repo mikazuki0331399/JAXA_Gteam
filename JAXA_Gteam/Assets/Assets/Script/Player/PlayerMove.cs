@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
+    public bool canMove = false;
     // プレイヤーの移動速度
     [SerializeField]
     private float moveSpeed = 15.0f;
@@ -40,14 +41,19 @@ public class PlayerMove : MonoBehaviour
     [SerializeField]
     private CameraShake cameraShake;
 
-
+   
     void Start()
     {
-
+        canMove = false;
     }
 
     void Update()
     {
+     
+        if (!canMove)
+        {
+            return;
+        }
         // 左右入力取得
         float horizontal = Input.GetAxisRaw("Horizontal");
 

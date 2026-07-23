@@ -421,7 +421,8 @@
         <member name="F:DG.Tweening.DOTween.timeScale">
             <summary>Global DOTween global timeScale (default: 1).<para/>
             The final timeScale of a non-timeScaleIndependent tween is:<para/>
-            <code>Unity's Time.timeScale * DOTween.timeScale * tween.timeScale</code><para/>
+            <code>Unity's 
+			* DOTween.timeScale * tween.timeScale</code><para/>
             while the final timeScale of a timeScaleIndependent tween is:<para/>
             <code>DOTween.unscaledTimeScale * DOTween.timeScale * tween.timeScale</code></summary>
         </member>

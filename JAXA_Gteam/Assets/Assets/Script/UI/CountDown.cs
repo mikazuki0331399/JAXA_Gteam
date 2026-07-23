@@ -7,10 +7,10 @@ public class Countdown : MonoBehaviour
 {
 
     public TextMeshProUGUI countdownText;
-
+    public GameManager gameManager;
     public EnemySpawner enemySpawner;
     public ProgressController progressController;
-
+    public PlayerMove playerMove;
     IEnumerator Start()
     {
         countdownText.text = "  3";
@@ -24,11 +24,13 @@ public class Countdown : MonoBehaviour
 
         countdownText.text = "START!";
         yield return new WaitForSeconds(1);
-
+     
         countdownText.gameObject.SetActive(false);
 
+        playerMove.canMove = true;
+        Debug.Log("プレイヤー移動開始");
         enemySpawner.StartGame();
-
+        gameManager.gameStarted = true;
         progressController.gameStarted = true;
     }
 

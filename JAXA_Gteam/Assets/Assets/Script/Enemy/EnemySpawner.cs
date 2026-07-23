@@ -26,7 +26,10 @@ public class EnemySpawner : MonoBehaviour
         );
     }
 
-
+    public void StopGame()
+    {
+        CancelInvoke();
+    }
     void SpawnEnemy()
     {
         int rand = Random.Range(0, 4);
@@ -81,6 +84,7 @@ public class EnemySpawner : MonoBehaviour
 
 
     }
+   
     private void OnDrawGizmos()
     {
         if (leftSpawn != null)

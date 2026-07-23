@@ -897,6 +897,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cbe2de6d2f589e4eb27e153aa5b12a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canMove: 0
   moveSpeed: 15
   hp: 10
   healthGauge: {fileID: 85526065}
@@ -1341,7 +1342,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &980341897
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1381,7 +1382,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: FINISH!!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1471,7 +1472,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   finishText: {fileID: 980341898}
+  playerMove: {fileID: 517695601}
   gameTime: 60
+  enemySpawner: {fileID: 0}
+  gameStarted: 0
 --- !u!1 &1049052752
 GameObject:
   m_ObjectHideFlags: 0
@@ -1714,8 +1718,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   countdownText: {fileID: 329357755}
+  gameManager: {fileID: 1342093760}
   enemySpawner: {fileID: 1523903858}
   progressController: {fileID: 1342093758}
+  playerMove: {fileID: 517695601}
 --- !u!4 &1233815966
 Transform:
   m_ObjectHideFlags: 0
@@ -1882,6 +1888,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1342093759}
   - component: {fileID: 1342093758}
+  - component: {fileID: 1342093760}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1922,6 +1929,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 23084258}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1342093760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342093757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 955e155eb2f85e548a5606649aeec1fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  finishText: {fileID: 980341898}
+  playerMove: {fileID: 517695601}
+  gameTime: 60
+  enemySpawner: {fileID: 1523903858}
+  gameStarted: 0
 --- !u!1 &1430672103
 GameObject:
   m_ObjectHideFlags: 0
