@@ -41,6 +41,8 @@ public class PlayerMove : MonoBehaviour
     [SerializeField]
     private CameraShake cameraShake;
 
+    [SerializeField]
+    private DamageWarning damageWarning;
    
     void Start()
     {
@@ -93,9 +95,14 @@ public class PlayerMove : MonoBehaviour
             }
 
             hp--;
-
+            if (hp <= 3)
+            {
+                damageWarning.isDanger = true;
+            }
+            
             if (hp <= 0)
             {
+                damageWarning.isDanger = false;
                 FindObjectOfType<GameManager>()
                     .FinishGame();
             }
@@ -123,7 +130,10 @@ public class PlayerMove : MonoBehaviour
         if (other.CompareTag("Health"))
         {
             hp++;
-
+            if (hp >= 4)
+            {
+                damageWarning.isDanger = false;
+            }
             // HP‚ªÅ‘å’l‚ð’´‚¦‚È‚¢‚æ‚¤‚É‚·‚é
             if (hp > 10)
             {
