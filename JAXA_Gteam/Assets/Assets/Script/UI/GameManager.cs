@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public TextMeshProUGUI finishText;
@@ -45,6 +45,7 @@ public class GameManager : MonoBehaviour
         finishText.text = "FINISH!";
         finishText.gameObject.SetActive(true);
         FinishGame(finishText);
+        StartCoroutine(ResultManagerCoroutine());
     }
 
     public void FinishGame(TextMeshProUGUI finishUIText)
@@ -68,5 +69,11 @@ public class GameManager : MonoBehaviour
         }
         enemySpawner.StopGame();
         Time.timeScale = 0f;
+    }
+
+    private IEnumerator ResultManagerCoroutine()
+    {
+        // 必要な処理をここに記述
+        yield return null;
     }
 }
