@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
         finishText.text = "FINISH!";
         finishText.gameObject.SetActive(true);
         FinishGame(finishText);
-        StartCoroutine(ResultManagerCoroutine());
+        StartCoroutine(GoResult());
     }
 
     public void FinishGame(TextMeshProUGUI finishUIText)
@@ -71,9 +71,10 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f;
     }
 
-    private IEnumerator ResultManagerCoroutine()
+    private IEnumerator GoResult()
     {
-        // 必要な処理をここに記述
-        yield return null;
+        yield return new WaitForSecondsRealtime (3f);
+
+        SceneManager.LoadScene("ResultScene");
     }
 }

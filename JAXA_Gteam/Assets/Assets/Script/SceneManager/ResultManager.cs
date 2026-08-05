@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ResultManager : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class ResultManager : MonoBehaviour
     {
         if(Input.anyKeyDown)
         {
-                       Scene.Instance.LoadTitle();
+            SceneManager.LoadScene("TitleScene");
         }
     }
 }
