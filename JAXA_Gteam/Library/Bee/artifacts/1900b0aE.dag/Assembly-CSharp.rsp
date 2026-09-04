@@ -379,6 +379,7 @@
 "Assets/Assets/Script/UI/GameManager.cs"
 "Assets/Assets/Script/UI/HealthGauge.cs"
 "Assets/Assets/Script/UI/ProgressController.cs"
+"Assets/Assets/Script/UI/Star.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark02.cs"
