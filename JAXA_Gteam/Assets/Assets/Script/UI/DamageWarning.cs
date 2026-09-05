@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -22,7 +22,7 @@ public class DamageWarning : MonoBehaviour
         {
             Color color = damageImage.color;
 
-            color.a = Mathf.PingPong(Time.time * 0.5f, 0.3f);
+            color.a = Mathf.PingPong(Time.time * 0.5f, 0.1f);
             damageImage.color = color;
         }
         else
