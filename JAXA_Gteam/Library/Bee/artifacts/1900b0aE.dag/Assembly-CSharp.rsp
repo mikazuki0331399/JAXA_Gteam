@@ -362,6 +362,7 @@
 "Assets/Assets/Script/Health/Heal Moves.cs"
 "Assets/Assets/Script/Health/Heal Sponner.cs"
 "Assets/Assets/Script/Load/Ball_Spin.cs"
+"Assets/Assets/Script/Load/SlideIn.cs"
 "Assets/Assets/Script/Load/TipData.cs"
 "Assets/Assets/Script/Load/TipsManager.cs"
 "Assets/Assets/Script/Player/PlayerMove.cs"
