@@ -28,7 +28,7 @@ public class Countdown : MonoBehaviour
      
         countdownText.gameObject.SetActive(false);
 
-        playerMove.canMove = true;
+
         //‚·‚×‚Ä‚Ì¯‚ğ“®‚©‚·
         foreach (StarMove star in stars)
         {

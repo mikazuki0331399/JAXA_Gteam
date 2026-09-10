@@ -382,7 +382,7 @@
 "Assets/Assets/Script/UI/PowerCheck.cs"
 "Assets/Assets/Script/UI/ProgressController.cs"
 "Assets/Assets/Script/UI/ProgressGaugeController.cs"
-"Assets/Assets/Script/UI/Star.cs"
+"Assets/Assets/Script/UI/StarMove.cs"
 "Assets/Assets/Script/UI/TimerController.cs"
 "Assets/Space/Shipwrecks/Scripts/CombineChildren.cs"
 "Assets/Space/Shipwrecks/Scripts/MeshCombineUtility.cs"
