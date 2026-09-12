@@ -11,7 +11,7 @@ public class Countdown : MonoBehaviour
     public EnemySpawner enemySpawner;
     public ProgressController progressController;
     public PlayerMove playerMove;
-    public StarMove[] stars;
+    //public StarMove[] stars;
     IEnumerator Start()
     {
         countdownText.text = "  3";
@@ -28,12 +28,9 @@ public class Countdown : MonoBehaviour
      
         countdownText.gameObject.SetActive(false);
 
+        playerMove.canMove = true;
 
         //すべての星を動かす
-        foreach (StarMove star in stars)
-        {
-            star.canMove = true;
-        }
         Debug.Log("プレイヤー移動開始");
         enemySpawner.StartGame();
         gameManager.gameStarted = true;

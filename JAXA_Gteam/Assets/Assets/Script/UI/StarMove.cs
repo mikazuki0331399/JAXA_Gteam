@@ -8,7 +8,7 @@ public class StarMove : MonoBehaviour
     private float speed = 100f;
 
     // カウントダウン後に動かす用
-    public bool canMove = false;
+    public bool canMove = true;
 
     void Update()
     {
